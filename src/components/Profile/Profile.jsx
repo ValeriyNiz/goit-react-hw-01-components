@@ -5,26 +5,32 @@ import PropTypes from 'prop-types';
 const Profile = props => {
   return (
     <div className={styles.profile}>
-      <h1>{props.test}</h1>
-      <div className="description">
-        <img src={props.avatar} alt="User avatar" className="avatar" />
-        <p className="name">{props.username}</p>
-        <p className="tag">{props.tag}</p>
-        <p className="location">{props.location}</p>
+      <div className={styles.description}>
+        <img
+          src={props.avatar}
+          alt="User avatar"
+          className={styles.avatar}
+          width="100"
+          height="100"
+        />
+        <span className={styles.name}>
+          <p className={styles.descrMarg}>{props.username}</p>
+        </span>
+        <p className={styles.descrMarg}>{props.tag}</p>
+        <p className={styles.descrMarg}>{props.location}</p>
       </div>
-
-      <ul className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{props.stats.followers}</span>
+      <ul className={styles.stats}>
+        <li className={styles.statsItem}>
+          <span className={styles.label}>Followers</span>
+          <span className={styles.quantity}>{props.stats.followers}</span>
         </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{props.stats.views}</span>
+        <li className={styles.statsItem}>
+          <span className={styles.label}>Views</span>
+          <span className={styles.quantity}>{props.stats.views}</span>
         </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{props.stats.likes}</span>
+        <li className={styles.statsItem}>
+          <span className={styles.label}>Likes</span>
+          <span className={styles.quantity}>{props.stats.likes}</span>
         </li>
       </ul>
     </div>

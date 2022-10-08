@@ -5,7 +5,7 @@ import FriendListItem from '../FriendListItem/FriendListItem';
 
 const FriendList = props => {
   return (
-    <ul className="friend-list">
+    <ul className={styles.friendList}>
       {props.friends.map(friend => {
         return (
           <FriendListItem

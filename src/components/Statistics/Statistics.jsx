@@ -4,14 +4,23 @@ import PropTypes from 'prop-types';
 
 const Statistics = props => {
   return (
-    <section className="statistics">
-      {props.title ? <h2 className="title">{props.title}</h2> : null}
-      <ul className="stat-list">
+    <section className={styles.statistics}>
+      {props.title ? <h2 className={styles.title}>{props.title}</h2> : null}
+      <ul className={styles.statList}>
         {props.stats.map(element => {
+          let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+
           return (
-            <li className="item" key={element.id}>
+            <li
+              className={styles.item}
+              key={element.id}
+              style={{
+                backgroundColor: '#' + `${randomColor}`,
+                borderRadius: '5px',
+              }}
+            >
               <span className="label">{element.label}</span>
-              <span className="percentage">{element.percentage}%</span>
+              <span className={styles.percentage}>{element.percentage}%</span>
             </li>
           );
         })}
