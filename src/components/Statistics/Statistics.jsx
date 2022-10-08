@@ -15,7 +15,7 @@ const Statistics = props => {
               className={styles.item}
               key={element.id}
               style={{
-                backgroundColor: '#' + `${randomColor}`,
+                backgroundColor: `#${randomColor}`,
                 borderRadius: '5px',
               }}
             >
